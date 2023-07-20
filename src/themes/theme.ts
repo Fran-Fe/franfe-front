@@ -1,4 +1,4 @@
-export const COLORS = {
+const theme = {
   backgorundPrimary: '#e6e6e6',
   backgroundSecondary: '#f5f7f9',
 
@@ -11,3 +11,5 @@ export const COLORS = {
   buttonSecondary: '#447878',
   buttonSecondaryVariant: '#325B5B',
 };
+
+export default theme;
