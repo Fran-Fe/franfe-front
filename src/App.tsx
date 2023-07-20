@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Home, Compare, Gallery, Rank } from 'pages';
 import { GlobalStyles, theme } from 'styles';
+import Layout from 'layouts/Layout';
 
 const App = () => {
   return (
@@ -9,10 +10,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/compare" element={<Compare />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/rank" element={<Rank />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/compare" element={<Compare />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/rank" element={<Rank />} />
+          </Route>
         </Routes>
       </ThemeProvider>
     </Router>
