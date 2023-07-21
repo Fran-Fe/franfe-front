@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import GoogleFormBanner from 'components/Header/GoogleFormBanner';
+import SearchBar from 'components/Header/SearchBar';
+import StaticHashTag from 'components/Header/StaticHashTag';
 
 const HeaderContainer = styled.div`
   position: absolute;
@@ -14,12 +16,21 @@ const HeaderContainer = styled.div`
   font-weight: bold;
   z-index: 2;
 `;
+const SearchNHashtagContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 35%;
+`;
 
 const Header = () => {
   return (
     <HeaderContainer>
       <GoogleFormBanner />
-      Dummy Data
+      <SearchNHashtagContainer>
+        <SearchBar />
+        <StaticHashTag />
+      </SearchNHashtagContainer>
     </HeaderContainer>
   );
 };

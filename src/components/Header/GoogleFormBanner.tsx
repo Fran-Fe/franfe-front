@@ -7,7 +7,7 @@ const BeltContainer = styled.div`
   width: 100%;
   height: 20%;
   padding: 0.2rem;
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
   font-size: 0.8rem;
   background-color: ${(props) => props.theme.backgroundSecondary};
 `;
