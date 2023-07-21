@@ -1,4 +1,4 @@
-export { default as Home } from 'pages/Home';
-export { default as Gallery } from 'pages/Gallery';
-export { default as Rank } from 'pages/Rank';
-export { default as Compare } from 'pages/Compare';
+export { default as Home } from './Home';
+export { default as Gallery } from './Gallery';
+export { default as Rank } from './Rank';
+export { default as Compare } from './Compare';

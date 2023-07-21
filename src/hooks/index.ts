@@ -1,1 +1,1 @@
-export { default as useDisplaySize } from 'hooks/useDisplaySize';
+export { default as useDisplaySize } from './useDisplaySize';
