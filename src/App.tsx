@@ -13,7 +13,7 @@ const App = () => {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/compare" element={<Compare />} />
-            <Route path="/gallery" element={<Gallery />} />q
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/rank" element={<Rank />} />
             <Route path="*" element={<NotFound />} />
           </Route>
