@@ -15,7 +15,7 @@ const HeaderCon = styled.div`
   z-index: 2;
 `;
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <HeaderCon>
       <GoogleFormBanner />
