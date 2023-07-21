@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import GoogleFormBanner from 'components/Header/GoogleFormBanner';
 
-const HeaderCon = styled.div`
+const HeaderContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -17,10 +17,10 @@ const HeaderCon = styled.div`
 
 const Header = () => {
   return (
-    <HeaderCon>
+    <HeaderContainer>
       <GoogleFormBanner />
       Dummy Data
-    </HeaderCon>
+    </HeaderContainer>
   );
 };
 
