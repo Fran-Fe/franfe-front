@@ -1,6 +1,6 @@
 import GoogleMapReact from 'google-map-react';
-import { ILocation, IMarker, DefaultMap } from './MapInterface';
-import MarkerUtils from './MarkerUtils';
+import { ILocation, IMarker, IDefaultMap } from 'components/Map/types';
+import MarkerUtils from 'components/Map/MarkerUtils';
 
 const handleApiLoaded = (map: any, maps: any) => {
   // use map and maps objects
@@ -18,7 +18,7 @@ const Map: React.FC = () => {
     lat: 37.801401,
     lng: -122.401569,
   };
-  const defaultLocation: DefaultMap = {
+  const defaultLocation: IDefaultMap = {
     bootstrapURLKeys: { key: GoogleMapKey },
     defaultCenter: defaultMarkerPosition,
     defaultZoom: 18,

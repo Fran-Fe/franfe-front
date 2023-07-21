@@ -1,10 +1,4 @@
-import { IMarker } from './MapInterface';
-
-interface IMarkerUtils {
-  defaultMarkerStyle: any;
-  hoverMarkerStyle: any;
-  addMarker(map: any, maps: any, markers: IMarker[]): void;
-}
+import { IMarker, IMarkerUtils } from 'components/Map/types';
 
 const defaultMarkerStyle = {
   path: 'M0,0 L20,0 L20,20 L0,20 Z',
@@ -33,7 +27,7 @@ const addMarker = (map: any, maps: any, markers: IMarker[]) => {
 
     // 마커 클릭 이벤트 리스너 등록
     markerObj.addListener('click', () => {
-      console.log(`마커를 클릭했습니다! 텍스트: ${marker.text}`);
+      console.log(`You've clicked a marker! Text: ${marker.text}`);
     });
 
     // 마커의 mouseover 이벤트 리스너 등록

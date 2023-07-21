@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 `;
 
 const SearchBar: React.FC = () => {
-  return <HeaderContainer>어리먿라ㅣ머리저디라ㅓ미러미</HeaderContainer>;
+  return <HeaderContainer>Dummy Data</HeaderContainer>;
 };
 
 export default SearchBar;
