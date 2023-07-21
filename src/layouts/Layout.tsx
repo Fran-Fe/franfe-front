@@ -9,21 +9,22 @@ const OutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  background-color: ${(props) => props.theme.backgroundSecondary};
 `;
 
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
-  max-width: 1200px;
+  max-width: 840px;
 `;
 
-const Content = styled.div`
+const Content = styled.main`
   display: flex;
-  max-width: 600px;
-  width: 100vw;
-  height: 100vh;
   flex: 1;
+  max-width: 420px;
+  min-height: 100vh;
+  background-color: ${(props) => props.theme.backgroundPrimary};
 `;
 
 const Layout = ({ children }: PropsWithChildren) => {
@@ -32,7 +33,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <OutContainer>
       <MainContainer>
-        {displaySize > 1100 ? <OnBoarding /> : <div />}
+        {displaySize > 1000 ? <OnBoarding /> : <div />}
         <Content>{children || <Outlet />}</Content>
       </MainContainer>
     </OutContainer>

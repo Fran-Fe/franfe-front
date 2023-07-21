@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 
 const useDisplaySize = () => {
-  const [currentDisplaySize, setCurrentDisplaySize] = useState(1200);
+  const [currentDisplaySize, setCurrentDisplaySize] = useState(window.innerWidth);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
@@ -11,7 +11,6 @@ const useDisplaySize = () => {
         setCurrentDisplaySize(window.innerWidth);
       }, 200);
     };
-
     window.addEventListener('resize', updateDisplaySize);
 
     return () => {
