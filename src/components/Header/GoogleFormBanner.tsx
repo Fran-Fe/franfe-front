@@ -6,15 +6,16 @@ const BeltDiv = styled.div`
   align-items: center;
   width: 100%;
   height: 20%;
-  padding: 1rem;
+  padding: 0.2rem;
   margin-bottom: 5px;
-  background-color: ${(props) => props.theme.backgroundPrimary};
+  background-color: ${(props) => props.theme.backgroundSecondary};
+  font-size: 0.8rem;
 `;
 const GoogleFormCon = styled.p`
   color: ${(props) => props.theme.fontPrimary};
 `;
 const GoogleFormA = styled.a`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ff0000;
 `;
 
