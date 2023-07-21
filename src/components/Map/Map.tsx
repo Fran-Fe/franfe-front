@@ -25,6 +25,7 @@ const Map: React.FC = () => {
   };
   return (
     <GoogleMapReact
+      style={{ position: 'relative', height: '100%' }}
       bootstrapURLKeys={defaultLocation.bootstrapURLKeys}
       defaultCenter={defaultLocation.defaultCenter}
       defaultZoom={defaultLocation.defaultZoom}
