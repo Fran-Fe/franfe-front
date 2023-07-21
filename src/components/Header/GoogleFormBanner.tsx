@@ -11,10 +11,12 @@ const BeltContainer = styled.div`
   font-size: 0.8rem;
   background-color: ${(props) => props.theme.backgroundSecondary};
 `;
-const BeltText = styled.p`
+
+const BeltText = styled.span`
   color: ${(props) => props.theme.fontPrimary};
 `;
 const GoogleFormText = styled.a`
+  font-size: 1rem;
   color: #ff0000;
 `;
 
