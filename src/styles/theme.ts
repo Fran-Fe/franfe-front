@@ -6,6 +6,7 @@ const theme = {
   fontPrimary: '#66696B',
   fontSecondary: '#325757',
   fontTertiary: '#4B2C34',
+  fontError: '#ff5700',
 
   buttonPrimary: '#7FA47F',
   buttonPrimaryVariant: '#5F795F',

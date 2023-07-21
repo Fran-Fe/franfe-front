@@ -19,12 +19,11 @@ const MainContainer = styled.div`
   max-width: 840px;
 `;
 
-const Content = styled.div`
+const Content = styled.main`
   display: flex;
-  max-width: 420px;
-  width: 100vw;
-  height: 100vh;
   flex: 1;
+  max-width: 420px;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.backgroundPrimary};
 `;
 
