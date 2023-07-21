@@ -1,6 +1,7 @@
 const theme = {
-  backgorundPrimary: '#e6e6e6',
-  backgroundSecondary: '#f5f7f9',
+  backgroundPrimary: '#fff',
+  backgroundSecondary: '#e6e6e6',
+  backgroundTertiary: '#f5f7f9',
 
   fontPrimary: '#66696B',
   fontSecondary: '#325757',

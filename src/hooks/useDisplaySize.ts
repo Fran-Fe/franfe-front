@@ -11,7 +11,6 @@ const useDisplaySize = () => {
         setCurrentDisplaySize(window.innerWidth);
       }, 200);
     };
-
     window.addEventListener('resize', updateDisplaySize);
 
     return () => {
