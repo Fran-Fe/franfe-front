@@ -10,7 +10,7 @@ const HeaderCon = styled.div`
   align-items: center;
   width: 100%;
   height: 150px;
-  color: black;
+  color: #000000;
   font-weight: bold;
   z-index: 2;
 `;
