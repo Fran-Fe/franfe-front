@@ -9,7 +9,7 @@ const OutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: ${(props) => props.theme.backgroundSecondary};
+  background-color: ${(props) => props.theme.backgroundOutside};
 `;
 
 const MainContainer = styled.div`

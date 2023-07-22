@@ -1,10 +1,5 @@
-import {
-  ErrorContainer,
-  ErrorImg,
-  ErrorText,
-  ErrorButton,
-  ErrorButtonText,
-} from './NotFoundComponents';
+import { Button } from 'components/Common';
+import { ErrorContainer, ErrorImg, ErrorText } from './NotFoundComponents';
 
 const NotFoundError = () => {
   return (
@@ -14,9 +9,9 @@ const NotFoundError = () => {
         Sorry, <br />
       </ErrorText>
       <ErrorText>We could not find that page.</ErrorText>
-      <ErrorButton>
-        <ErrorButtonText>GO TO HOME</ErrorButtonText>
-      </ErrorButton>
+      <Button variant="secondaryBasic" scale="sm">
+        GO TO HOME
+      </Button>
     </ErrorContainer>
   );
 };

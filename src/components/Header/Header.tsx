@@ -4,34 +4,32 @@ import SearchBar from 'components/Header/SearchBar';
 import StaticHashTag from 'components/Header/StaticHashTag';
 
 const HeaderContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 150px;
-  color: #000000;
-  font-weight: bold;
-  z-index: 2;
+  margin: 0.7rem 0;
+  color: #000;
+  font-weight: 700;
+  z-index: 1;
 `;
 const SearchNHashtagContainer = styled.div`
   display: flex;
   justify-content: space-around;
   width: 90%;
-  height: 35%;
 `;
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <>
       <GoogleFormBanner />
-      <SearchNHashtagContainer>
-        <SearchBar />
-        <StaticHashTag />
-      </SearchNHashtagContainer>
-    </HeaderContainer>
+      <HeaderContainer>
+        <SearchNHashtagContainer>
+          <SearchBar />
+          <StaticHashTag />
+        </SearchNHashtagContainer>
+      </HeaderContainer>
+    </>
   );
 };
 
