@@ -12,7 +12,7 @@ const handleApiLoaded = (map: any, maps: any) => {
 
   MarkerUtils.addMarker(map, maps, markers);
 };
-const Map: React.FC = () => {
+const Map = () => {
   const GoogleMapKey = process.env.REACT_APP_GOOGLE_MAP_KEY;
   const defaultMarkerPosition = {
     lat: 37.801401,

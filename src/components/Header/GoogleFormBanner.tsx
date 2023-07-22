@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 const BeltContainer = styled.div`
+  position: absolute;
   width: 100%;
   padding: 0.2rem;
   font-size: 0.8em;
   text-align: center;
-  z-index: 1;
+  z-index: 3;
   color: ${(props) => props.theme.fontPrimary};
   background-color: ${(props) => props.theme.backgroundSecondary};
 `;
@@ -15,7 +16,7 @@ const GoogleFormText = styled.a`
   color: #ff0000;
 `;
 
-const GoogleFormBanner: React.FC = () => {
+const GoogleFormBanner = () => {
   return (
     <BeltContainer>
       Please

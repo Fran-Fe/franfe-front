@@ -4,7 +4,10 @@ import { ErrorContainer, ErrorImg, ErrorText } from './NotFoundComponents';
 const NotFoundError = () => {
   return (
     <ErrorContainer>
-      <ErrorImg src={`${process.env.PUBLIC_URL}/assets/images/404_Error.svg`} alt="asd" />
+      <ErrorImg
+        src={`${process.env.PUBLIC_URL}/assets/images/404_Error.svg`}
+        alt="404 Not Found Img"
+      />
       <ErrorText>
         Sorry, <br />
       </ErrorText>
