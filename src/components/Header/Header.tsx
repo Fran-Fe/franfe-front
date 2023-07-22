@@ -6,7 +6,6 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
   color: #000;
   font-weight: 700;
   z-index: 1;
