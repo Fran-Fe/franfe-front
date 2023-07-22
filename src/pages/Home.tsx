@@ -9,11 +9,11 @@ const MainContainer = styled.div`
   height: 100%;
 `;
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <MainContainer>
       <Header />
-      {/* <Map /> */}
+      <Map />
     </MainContainer>
   );
 };

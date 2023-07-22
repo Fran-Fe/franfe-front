@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import GoogleFormBanner from 'components/Header/GoogleFormBanner';
-import SearchBar from 'components/Header/SearchBar';
-import StaticHashTag from 'components/Header/StaticHashTag';
+import { GoogleFormBanner, SearchBar, StaticHashTag } from 'components/Header';
 
 const HeaderContainer = styled.div`
   display: flex;

@@ -20,6 +20,7 @@ const MainContainer = styled.div`
 `;
 
 const Content = styled.main`
+  position: relative;
   display: flex;
   flex: 1;
   max-width: 420px;
