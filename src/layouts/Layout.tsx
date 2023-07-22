@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useDisplaySize } from 'hooks';
 import { OnBoarding } from 'components/OnBoarding';
 import { GoogleFormBanner } from 'components/Header';
+import { Footer } from 'components/Footer';
 import styled from 'styled-components';
 
 const OutContainer = styled.div`
@@ -39,6 +40,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         <Content>
           <GoogleFormBanner />
           {children || <Outlet />}
+          <Footer />
         </Content>
       </ContentContainer>
     </OutContainer>
