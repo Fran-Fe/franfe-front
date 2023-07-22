@@ -13,7 +13,7 @@ const OutContainer = styled.div`
   background-color: ${(props) => props.theme.backgroundOutside};
 `;
 
-const MainContainer = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -34,13 +34,13 @@ const Layout = ({ children }: PropsWithChildren) => {
 
   return (
     <OutContainer>
-      <MainContainer>
+      <ContentContainer>
         {displaySize > 1000 ? <OnBoarding /> : <div />}
         <Content>
           <GoogleFormBanner />
           {children || <Outlet />}
         </Content>
-      </MainContainer>
+      </ContentContainer>
     </OutContainer>
   );
 };

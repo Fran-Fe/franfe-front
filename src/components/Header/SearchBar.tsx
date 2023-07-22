@@ -6,7 +6,7 @@ const SearchBarContainer = styled.div`
   height: 43px;
   margin-right: 0.5rem;
   padding: 0.5rem 1.5rem;
-  border-radius: 1rem;
+  border-radius: 10px;
   box-shadow: 0 0.25rem 0.25rem ${(props) => props.theme.backgroundSecondary};
   background-color: ${(props) => props.theme.backgroundTertiary};
 `;
