@@ -2,7 +2,7 @@ import { Map } from 'components/Map';
 import { Header } from 'components/Header';
 import styled from 'styled-components';
 
-const MainCon = styled.div`
+const MainContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
@@ -12,10 +12,10 @@ const MainCon = styled.div`
 
 const Home: React.FC = () => {
   return (
-    <MainCon>
+    <MainContainer>
       <Header />
       <Map />
-    </MainCon>
+    </MainContainer>
   );
 };
 export default Home;
