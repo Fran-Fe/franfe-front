@@ -1,4 +1,5 @@
 const theme = {
+  backgroundOutside: '#f4f4f4',
   backgroundPrimary: '#fff',
   backgroundSecondary: '#e6e6e6',
   backgroundTertiary: '#f5f7f9',
