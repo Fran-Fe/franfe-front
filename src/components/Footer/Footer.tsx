@@ -1,35 +1,40 @@
+import { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { FooterContainer, FooterIconButton, FooterIcon } from './FooterComponent';
+import { FooterContainer, FooterIconButton, FooterIcon, FooterCategories } from 'components/Footer';
 
 const Footer = () => {
+  const presentLocation = useLocation();
+  const navigate = useNavigate();
+  const presentURL = presentLocation.pathname.replace('/', '');
+  const [selectedFooter, setSelectedFooter] = useState(presentURL || 'home');
+
+  const handleSelectedFooter = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const selectedCategory = event.currentTarget.name.toLowerCase();
+    setSelectedFooter(selectedCategory);
+
+    if (['gallery', 'ranking'].includes(selectedCategory)) navigate(`/${selectedCategory}`);
+    if (selectedCategory === 'home') navigate('/');
+  };
+
   return (
     <FooterContainer>
-      <FooterIconButton>
-        <FooterIcon src={`${process.env.PUBLIC_URL}/assets/images/Home.svg`} alt="Home Icon" />
-        Home
-      </FooterIconButton>
-      <FooterIconButton>
-        <FooterIcon src={`${process.env.PUBLIC_URL}/assets/images/heart.svg`} alt="Heart Icon" />
-        Pick
-      </FooterIconButton>
-      <FooterIconButton>
-        <FooterIcon
-          src={`${process.env.PUBLIC_URL}/assets/images/gallery.svg`}
-          alt="Gallery Icon"
-        />
-        Gallery
-      </FooterIconButton>
-      <FooterIconButton>
-        <FooterIcon
-          src={`${process.env.PUBLIC_URL}/assets/images/ranking.svg`}
-          alt="Ranking Icon"
-        />
-        Ranking
-      </FooterIconButton>
-      <FooterIconButton>
-        <FooterIcon src={`${process.env.PUBLIC_URL}/assets/images/list.svg`} alt="List Icon" />
-        List
-      </FooterIconButton>
+      {FooterCategories.map((category) => {
+        return (
+          <FooterIconButton
+            key={category}
+            name={category.toLowerCase()}
+            selectedcategory={selectedFooter}
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleSelectedFooter(event)}
+          >
+            <FooterIcon
+              src={`${process.env.PUBLIC_URL}/assets/images/${category}.svg`}
+              alt={`${category} Icon`}
+            />
+            {category}
+          </FooterIconButton>
+        );
+      })}
     </FooterContainer>
   );
 };
