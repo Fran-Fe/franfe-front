@@ -15,7 +15,7 @@ const Home = () => {
     <MainContainer>
       <Header />
       <Card />
-      {/* <Map /> */}
+      <Map />
     </MainContainer>
   );
 };

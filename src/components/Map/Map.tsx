@@ -1,5 +1,5 @@
 import GoogleMapReact from 'google-map-react';
-import { ILocation, IMarker, IDefaultMap } from 'components/Map/types';
+import { IMarker, IDefaultMap } from 'components/Map/types';
 import MarkerUtils from 'components/Map/MarkerUtils';
 
 const handleApiLoaded = (map: any, maps: any) => {
@@ -18,6 +18,11 @@ const Map = () => {
     lat: 37.801401,
     lng: -122.401569,
   };
+  const mapOptions = {
+    fullscreenControl: false, // fullscreen 버튼 제거
+    zoomControl: false, // zoom-in, zoom-out 버튼 제거
+  };
+
   const defaultLocation: IDefaultMap = {
     bootstrapURLKeys: { key: GoogleMapKey },
     defaultCenter: defaultMarkerPosition,
@@ -29,6 +34,7 @@ const Map = () => {
       bootstrapURLKeys={defaultLocation.bootstrapURLKeys}
       defaultCenter={defaultLocation.defaultCenter}
       defaultZoom={defaultLocation.defaultZoom}
+      options={mapOptions}
       yesIWantToUseGoogleMapApiInternals
       onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
     />
