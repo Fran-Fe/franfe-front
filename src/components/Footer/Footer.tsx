@@ -9,6 +9,10 @@ const Footer = () => {
   const presentURL = presentLocation.pathname.replace('/', '');
   const [selectedFooter, setSelectedFooter] = useState(presentURL || 'home');
 
+  useEffect(() => {
+    setSelectedFooter(presentURL || 'home');
+  }, [presentURL]);
+
   const handleSelectedFooter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const selectedCategory = event.currentTarget.name.toLowerCase();
     setSelectedFooter(selectedCategory);

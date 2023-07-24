@@ -36,7 +36,6 @@ export const FooterIconButton = styled.button<IFooterButtonProps>`
       ? 'inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.7);'
       : 'none'};
 `;
-
 export const FooterIcon = styled.img`
   width: 100%;
   height: 65%;
