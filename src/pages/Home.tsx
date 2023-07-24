@@ -1,5 +1,6 @@
 import { Map } from 'components/Map';
 import { Header } from 'components/Header';
+import { Card } from 'components/Card';
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
@@ -13,7 +14,8 @@ const Home = () => {
   return (
     <MainContainer>
       <Header />
-      <Map />
+      <Card />
+      {/* <Map /> */}
     </MainContainer>
   );
 };
