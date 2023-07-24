@@ -20,7 +20,8 @@ const CustomBtn = styled(Button)`
   color: ${(props) => props.theme.backgroundSecondary};
 `;
 
-const ArrowBtn: React.FC<ArrowButtonProps> = ({ onClick, icon }) => {
+const ArrowBtn = (props: ArrowButtonProps) => {
+  const { onClick, icon } = props;
   return (
     <BtnContainer>
       <CustomBtn onClick={onClick}>{icon}</CustomBtn>
