@@ -4,7 +4,7 @@ import { CardCon, CardImage, CardImageContainer, CardTextContainer } from './Car
 
 const CardText = styled.p`
   font-size: 1.2rem;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 `;
 const CardButton = styled.div`
   display: flex;
