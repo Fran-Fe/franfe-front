@@ -1,6 +1,5 @@
 import GoogleMapReact from 'google-map-react';
-import { IMarker, IDefaultMap } from 'components/Map/types';
-import MarkerUtils from 'components/Map/MarkerUtils';
+import { MarkerUtils, IMarker, IDefaultMap } from 'components/Map';
 
 const handleApiLoaded = (map: any, maps: any) => {
   // use map and maps objects
@@ -19,8 +18,8 @@ const Map = () => {
     lng: -122.401569,
   };
   const mapOptions = {
-    fullscreenControl: false, // fullscreen 버튼 제거
-    zoomControl: false, // zoom-in, zoom-out 버튼 제거
+    fullscreenControl: false, // removed fullscreen button
+    zoomControl: false, // removed zoom-in, zoom-out button
   };
 
   const defaultLocation: IDefaultMap = {
