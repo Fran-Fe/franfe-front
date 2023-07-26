@@ -1,18 +1,11 @@
 import { IMarker, IMarkerUtils } from 'components/Map/types';
 
 const defaultMarkerStyle = {
-  path: 'M0,0 L20,0 L20,20 L0,20 Z',
-  fillColor: 'red',
-  fillOpacity: 1,
-  strokeColor: 'red',
-  strokeWeight: 1,
-  scale: 1,
+  url: `${process.env.PUBLIC_URL}/assets/images/marker_icon_default.svg`,
 };
 
 const hoverMarkerStyle = {
-  ...defaultMarkerStyle,
-  fillColor: 'green',
-  strokeColor: 'green',
+  url: `${process.env.PUBLIC_URL}/assets/images/marker_icon_hover_click.svg`,
 };
 
 const addMarker = (map: any, maps: any, markers: IMarker[]) => {
@@ -22,7 +15,9 @@ const addMarker = (map: any, maps: any, markers: IMarker[]) => {
       position: { lat: marker.lat, lng: marker.lng },
       map,
       title: marker.text,
-      icon: defaultMarkerStyle, // 기본 마커 스타일 설정
+      icon: {
+        url: `${process.env.PUBLIC_URL}/assets/images/marker_icon_default.svg`,
+      },
     });
 
     // 마커 클릭 이벤트 리스너 등록
