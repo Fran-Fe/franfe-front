@@ -13,7 +13,9 @@ export const CardCon = styled.div`
   overflow: auto;
   border-radius: 1.25rem;
   box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
+  z-index: 1;
 `;
+
 export const CardImageContainer = styled.div`
   display: flex;
   white-space: nowrap;
@@ -22,6 +24,7 @@ export const CardImageContainer = styled.div`
   height: 45%;
   overflow-x: auto;
 `;
+
 export const CardImage = styled.img`
   flex-shrink: 0;
   width: 40%;
@@ -29,6 +32,7 @@ export const CardImage = styled.img`
   margin: 0 0.1rem;
   background-color: ${(props) => props.theme.backgroundSecondary};
 `;
+
 export const CardTextContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -37,6 +41,7 @@ export const CardTextContainer = styled.div`
   padding: 0.5rem 0 0 0.5rem;
   background-color: ${(props) => props.theme.backgroundPrimary};
 `;
+
 // SliderUtils
 export const CustomSlider = styled(Slider)`
   position: relative;
@@ -44,7 +49,7 @@ export const CustomSlider = styled(Slider)`
   .slick-arrow {
     padding: 2rem;
     border-radius: 50%;
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
   }
   .slick-prev:before,

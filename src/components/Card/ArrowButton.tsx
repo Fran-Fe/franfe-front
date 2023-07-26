@@ -20,7 +20,7 @@ const CustomBtn = styled(Button)`
   color: ${(props) => props.theme.backgroundSecondary};
 `;
 
-const ArrowBtn = (props: ArrowButtonProps) => {
+const ArrowButton = (props: ArrowButtonProps) => {
   const { onClick, icon } = props;
   return (
     <BtnContainer>
@@ -29,4 +29,4 @@ const ArrowBtn = (props: ArrowButtonProps) => {
   );
 };
 
-export default ArrowBtn;
+export default ArrowButton;

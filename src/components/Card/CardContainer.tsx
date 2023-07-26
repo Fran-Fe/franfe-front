@@ -2,6 +2,16 @@ import styled from 'styled-components';
 import { Button } from 'components/Common';
 import { CardCon, CardImage, CardImageContainer, CardTextContainer } from './CardUtils';
 
+const CardText = styled.p`
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+`;
+const CardButton = styled.div`
+  display: flex;
+  alignitems: flex-end;
+  padding: '0 0.4rem 0.4rem 0';
+`;
+
 const CardContainer = () => {
   return (
     <CardCon>
@@ -14,14 +24,14 @@ const CardContainer = () => {
       </CardImageContainer>
       <CardTextContainer>
         <div>
-          <p style={{ fontSize: '1.2rem', margin: '0 0 1rem 0' }}>CafeName</p>
+          <CardText>CafeName</CardText>
           <p>1st Info</p>
         </div>
-        <div style={{ display: 'flex', alignItems: 'flex-end', padding: '0 0.4rem 0.4rem 0' }}>
+        <CardButton>
           <Button variant="primary" scale="xs">
             Pick
           </Button>
-        </div>
+        </CardButton>
       </CardTextContainer>
     </CardCon>
   );
