@@ -9,7 +9,7 @@ export const CardCon = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 8rem;
+  height: 10rem;
   overflow: auto;
   border-radius: 1.25rem;
   box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
@@ -62,4 +62,5 @@ export const CustomSlider = styled(Slider)`
     left: 50%;
     transform: translateX(-50%);
   }
+  z-index: 4;
 `;

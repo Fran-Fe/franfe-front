@@ -1,6 +1,7 @@
 import { Map } from 'components/Map';
 import { Header } from 'components/Header';
 import { Card } from 'components/Card';
+import { HashtagIcon } from 'components/HashtagIcon';
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
@@ -11,9 +12,11 @@ const MainContainer = styled.div`
 `;
 
 const Home = () => {
+  const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];
   return (
     <MainContainer>
       <Header />
+      <HashtagIcon Hashtags={HashtagData} />
       <Card />
       <Map />
     </MainContainer>
