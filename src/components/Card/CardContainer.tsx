@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import { Button } from 'components/Common';
+import { HashtagIcon } from 'components/HashtagIcon';
 import { CardCon, CardImage, CardImageContainer, CardTextContainer } from './CardUtils';
 
 const CardText = styled.p`
   font-size: 1.2rem;
-  margin-bottom: 1rem;
 `;
 const CardButton = styled.div`
   display: flex;
-  alignitems: flex-end;
-  padding: '0 0.4rem 0.4rem 0';
+  align-items: flex-end;
+  padding: 0 0.4rem 0.4rem 0;
 `;
 
 const CardContainer = () => {
+  const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];
   return (
     <CardCon>
       <CardImageContainer>
@@ -23,10 +24,9 @@ const CardContainer = () => {
         <CardImage src="#" alt="Image By AI" />
       </CardImageContainer>
       <CardTextContainer>
-        <div>
-          <CardText>CafeName</CardText>
-          <p>1st Info</p>
-        </div>
+        <CardText>CafeName</CardText>
+        <HashtagIcon Hashtags={HashtagData} />
+        <p>1st Info</p>
         <CardButton>
           <Button variant="primary" scale="xs">
             Pick
