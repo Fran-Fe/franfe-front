@@ -3,13 +3,33 @@ import { Button } from 'components/Common';
 import { HashtagIcon } from 'components/HashtagIcon';
 import { CardCon, CardImage, CardImageContainer, CardTextContainer } from './CardUtils';
 
-const CardText = styled.p`
+const CardTopContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 0 0.5rem;
+`;
+
+const CardBottomContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem 0.4rem 0.3rem 1rem;
+  font-size: 90%;
+`;
+
+const CardTitle = styled.p`
   font-size: 1.2rem;
 `;
-const CardButton = styled.div`
-  display: flex;
-  align-items: flex-end;
-  padding: 0 0.4rem 0.4rem 0;
+
+const CustomButton = styled(Button)`
+  width: 3.7rem;
+  height: 1.7rem;
+  box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
 `;
 
 const CardContainer = () => {
@@ -24,14 +44,17 @@ const CardContainer = () => {
         <CardImage src="#" alt="Image By AI" />
       </CardImageContainer>
       <CardTextContainer>
-        <CardText>CafeName</CardText>
+        <CardTopContainer>
+          <CardTitle>CafeName</CardTitle>
+          <p>Star ( nums of review ) </p>
+        </CardTopContainer>
         <HashtagIcon Hashtags={HashtagData} />
-        <p>1st Info</p>
-        <CardButton>
-          <Button variant="primary" scale="xs">
+        <CardBottomContainer>
+          <p>Address</p>
+          <CustomButton variant="primary" scale="xs">
             Pick
-          </Button>
-        </CardButton>
+          </CustomButton>
+        </CardBottomContainer>
       </CardTextContainer>
     </CardCon>
   );

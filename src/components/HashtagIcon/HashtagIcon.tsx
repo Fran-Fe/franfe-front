@@ -9,11 +9,11 @@ const HashtagsOverflow = styled.div`
   white-space: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 0 0 0.5rem 0.5rem;
+  margin: 0 0.5rem;
   &::-webkit-scrollbar {
     display: none;
   }
-  z-index: 4;
+  z-index: 1;
 `;
 
 const HashtagIconContainer = styled.div`
@@ -25,7 +25,7 @@ const HashtagIconContainer = styled.div`
   padding: 0 1rem;
   border-radius: 20px;
   background-color: #fff;
-  box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
+  box-shadow: 0 2px 2px ${(props) => props.theme.backgroundSecondary};
 `;
 
 const HashtagIcon = (props: HashtagContextProps) => {
