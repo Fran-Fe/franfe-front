@@ -1,6 +1,7 @@
 import { Map } from 'components/Map';
 import { Header } from 'components/Header';
 import { Card } from 'components/Card';
+import { RedoButton } from 'components/RedoButton';
 import { HashtagIcon } from 'components/HashtagIcon';
 import styled from 'styled-components';
 
@@ -17,6 +18,7 @@ const Home = () => {
     <MainContainer>
       <Header />
       <HashtagIcon Hashtags={HashtagData} />
+      <RedoButton />
       <Card />
       <Map />
     </MainContainer>
