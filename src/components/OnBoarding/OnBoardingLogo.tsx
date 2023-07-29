@@ -5,14 +5,18 @@ const OnBoardingLogoContainer = styled.div`
   height: 30%;
 `;
 
+const OnBoardingLogoImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 const OnBoardingLogo = () => {
   return (
     <OnBoardingLogoContainer>
-      <p style={{ fontSize: '5rem' }}>
-        Fran
-        <br />
-        Fe.
-      </p>
+      <OnBoardingLogoImg
+        src={`${process.env.PUBLIC_URL}/assets/images/franfe-logo.svg`}
+        alt="Logo Img"
+      />
     </OnBoardingLogoContainer>
   );
 };
