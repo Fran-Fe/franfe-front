@@ -10,6 +10,7 @@ export const CardCon = styled.div`
   justify-content: center;
   width: 100%;
   height: 10rem;
+  margin-bottom: 1rem;
   overflow: auto;
   border-radius: 1.25rem;
   box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
