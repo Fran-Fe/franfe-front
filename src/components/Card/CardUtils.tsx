@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 // CardContainerUtils
 export const CardCon = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ export const CardImageContainer = styled.div`
   white-space: nowrap;
   flex-wrap: nowrap;
   width: 100%;
-  height: 45%;
+  height: 40%;
   overflow-x: auto;
 `;
 
@@ -35,10 +36,10 @@ export const CardImage = styled.img`
 
 export const CardTextContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  flex-direction: column;
   width: 100%;
-  height: 55%;
-  padding: 0.5rem 0 0 0.5rem;
+  height: 60%;
   background-color: ${(props) => props.theme.backgroundPrimary};
 `;
 
