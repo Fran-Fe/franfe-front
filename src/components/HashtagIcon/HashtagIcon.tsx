@@ -9,7 +9,7 @@ const HashtagsOverflow = styled.div`
   white-space: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 0 0.5rem;
+  margin-left: 0.5rem;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -21,7 +21,7 @@ const HashtagIconContainer = styled.div`
   align-items: center;
   width: fit-content;
   height: 1.5rem;
-  margin: 0.2rem 0.1rem;
+  margin: 0.2rem 0.2rem;
   padding: 0 1rem;
   border-radius: 20px;
   background-color: #fff;
