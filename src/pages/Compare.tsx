@@ -1,5 +1,7 @@
+import { Detail } from 'components/Detail';
+
 const Compare = () => {
-  return <>Compare PAGE</>;
+  return <Detail />;
 };
 
 export default Compare;
