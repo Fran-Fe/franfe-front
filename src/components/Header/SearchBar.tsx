@@ -10,6 +10,7 @@ const SearchBarContainer = styled.div`
   box-shadow: 0 0.25rem 0.25rem ${(props) => props.theme.backgroundSecondary};
   background-color: ${(props) => props.theme.backgroundTertiary};
 `;
+
 const SearchBarTextContainer = styled.input`
   width: 85%;
   font-size: 1.1rem;
@@ -17,26 +18,29 @@ const SearchBarTextContainer = styled.input`
   font-color: ${(props) => props.theme.fontPrimary};
   background-color: ${(props) => props.theme.backgroundTertiary};
 `;
-const SearchBarBtn = styled.button`
+
+const SearchBarButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 15%;
 `;
+
 const SearchIconImg = styled.img`
   width: 60%;
   height: 60%;
 `;
+
 const SearchBar = () => {
   return (
     <SearchBarContainer>
       <SearchBarTextContainer placeholder="Search Here" />
-      <SearchBarBtn>
+      <SearchBarButton>
         <SearchIconImg
           src={`${process.env.PUBLIC_URL}/assets/images/search_icon.svg`}
           alt="Search Icon"
         />
-      </SearchBarBtn>
+      </SearchBarButton>
     </SearchBarContainer>
   );
 };
