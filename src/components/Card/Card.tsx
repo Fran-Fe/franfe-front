@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import Slider from 'react-slick';
-import { ArrowButton, CardContainer, CustomSlider } from 'components/Card';
+import { ArrowButton, CardInformation, CustomSlider } from 'components/Card';
 
 const Card = () => {
   const sliderRef = useRef<Slider>(null);
@@ -29,9 +29,9 @@ const Card = () => {
   };
   return (
     <CustomSlider {...slickSettings}>
-      <CardContainer />
-      <CardContainer />
-      <CardContainer />
+      <CardInformation />
+      <CardInformation />
+      <CardInformation />
     </CustomSlider>
   );
 };

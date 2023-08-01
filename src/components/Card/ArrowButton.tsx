@@ -7,14 +7,14 @@ interface ArrowButtonProps {
   icon: string;
 }
 
-const BtnContainer = styled.div`
+const ArrowContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 2rem;
 `;
 
-const CustomBtn = styled(Button)`
+const ArrowIcon = styled(Button)`
   font-size: 2.5rem;
   background: transparent;
   color: ${(props) => props.theme.backgroundSecondary};
@@ -23,9 +23,9 @@ const CustomBtn = styled(Button)`
 const ArrowButton = (props: ArrowButtonProps) => {
   const { onClick, icon } = props;
   return (
-    <BtnContainer>
-      <CustomBtn onClick={onClick}>{icon}</CustomBtn>
-    </BtnContainer>
+    <ArrowContainer>
+      <ArrowIcon onClick={onClick}>{icon}</ArrowIcon>
+    </ArrowContainer>
   );
 };
 

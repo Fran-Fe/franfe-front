@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Header } from 'components/Header';
-import { CardContainer } from 'components/Card';
+import { CardInformation } from 'components/Card';
 import { HashtagIcon } from 'components/HashtagIcon';
 import {
   ListContainer,
@@ -25,12 +25,12 @@ const List = () => {
         <HashtagIcon Hashtags={DummyDatas} />
       </IconsContainer>
       <CardsContainer>
-        <CardContainer />
-        <CardContainer />
-        <CardContainer />
-        <CardContainer />
-        <CardContainer />
-        <CardContainer />
+        <CardInformation />
+        <CardInformation />
+        <CardInformation />
+        <CardInformation />
+        <CardInformation />
+        <CardInformation />
       </CardsContainer>
     </ListContainer>
   );

@@ -1,3 +1,4 @@
+import { Button } from 'components/Common';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -65,4 +66,33 @@ export const CustomSlider = styled(Slider)`
     transform: translateX(-50%);
   }
   z-index: 4;
+`;
+
+export const CardTopContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 0 0.5rem;
+`;
+
+export const CardBottomContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem 0.4rem 0.3rem 1rem;
+  font-size: 90%;
+`;
+
+export const CardTitle = styled.p`
+  font-size: 1.2rem;
+`;
+
+export const CustomButton = styled(Button)`
+  width: 3.7rem;
+  height: 1.7rem;
+  box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
 `;
