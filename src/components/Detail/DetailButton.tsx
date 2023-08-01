@@ -2,7 +2,7 @@ import {
   DetailButtonContainer,
   DetailPickButtonContainer,
   DetailPickButton,
-  DetailInformationButton,
+  DetailInformationTooltip,
 } from 'components/Detail';
 
 const DetailButton = () => {
@@ -15,7 +15,7 @@ const DetailButton = () => {
         />
         Pick
       </DetailPickButtonContainer>
-      <DetailInformationButton
+      <DetailInformationTooltip
         src={`${process.env.PUBLIC_URL}/assets/images/information_icon.svg`}
         alt="Information Image"
       />

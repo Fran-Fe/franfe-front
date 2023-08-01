@@ -6,14 +6,12 @@ export {
   DetailRateContainer,
   DetailImageContainer,
   DetailGPTContainer,
-} from './DetailLayouts';
-export {
   DetailBackButton,
   DetailTitle,
   DetailButtonContainer,
   DetailPickButtonContainer,
   DetailPickButton,
-  DetailInformationButton,
+  DetailInformationTooltip,
   DetailRateStar,
   DetailRateNumsReview,
   DetailImg,
