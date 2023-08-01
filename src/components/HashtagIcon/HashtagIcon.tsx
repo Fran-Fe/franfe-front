@@ -6,22 +6,21 @@ interface HashtagContextProps {
 
 const HashtagsOverflow = styled.div`
   display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  gap: 0.5rem;
   overflow-x: auto;
   margin-left: 0.5rem;
+  z-index: 1;
   &::-webkit-scrollbar {
     display: none;
   }
-  z-index: 1;
 `;
 
-const HashtagIconContainer = styled.div`
+const HashtagIconButton = styled.button`
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: 100%;
   height: 1.5rem;
-  margin: 0.2rem 0.2rem;
+  margin: 0.2rem 0;
   padding: 0 1rem;
   border-radius: 20px;
   background-color: #fff;
@@ -34,7 +33,7 @@ const HashtagIcon = (props: HashtagContextProps) => {
   return (
     <HashtagsOverflow>
       {Hashtags.map((hashtag, index) => (
-        <HashtagIconContainer key={hashtag + index.toString()}>{hashtag}</HashtagIconContainer>
+        <HashtagIconButton key={hashtag + index.toString()}>{hashtag}</HashtagIconButton>
       ))}
     </HashtagsOverflow>
   );
