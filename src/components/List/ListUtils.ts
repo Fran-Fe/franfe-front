@@ -38,9 +38,7 @@ export const BackButton = styled.img`
 
 export const CardsContainer = styled.div`
   display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
 `;

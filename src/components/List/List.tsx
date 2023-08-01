@@ -8,7 +8,7 @@ import {
   IconsContainer,
   BackButton,
   CardsContainer,
-} from './ListUtils';
+} from 'components/List/ListUtils';
 
 const List = () => {
   const DummyDatas = ['Reviews', 'Rates', 'WiFi'];
