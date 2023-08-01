@@ -4,6 +4,14 @@ interface CardRanking {
   ranking: number;
 }
 
+interface RankingCardProps {
+  ranking: number;
+  src: string;
+  alt: string;
+  title: string;
+  content: string;
+}
+
 const Card = styled.div<CardRanking>`
   display: flex;
   align-items: center;
@@ -43,14 +51,6 @@ const CardTextContent = styled.div`
   font-size: 0.8rem;
   padding: 0.3rem;
 `;
-
-interface RankingCardProps {
-  ranking: number;
-  src: string;
-  alt: string;
-  title: string;
-  content: string;
-}
 
 const RankingCard = (props: RankingCardProps) => {
   const { ranking, src, alt, title, content } = props;

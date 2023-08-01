@@ -3,7 +3,6 @@ import {
   RankingHeader,
   RankingContainer,
   RankBackButton,
-  RankHeadText,
   RankingText,
   RankingCard,
 } from 'components/Rank';
@@ -13,7 +12,6 @@ const Ranking = () => {
     <RankingLayouts>
       <RankingHeader>
         <RankBackButton src={`${process.env.PUBLIC_URL}/assets/images/back_icon.svg`} />
-        <RankHeadText>Ranking</RankHeadText>
       </RankingHeader>
       <RankingContainer>
         <RankingText>GPT Ranking</RankingText>
