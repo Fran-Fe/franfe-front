@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { HashtagIcon } from 'components/HashtagIcon';
 import {
-  CardCon,
+  CardContainer,
   CardImage,
   CardImageContainer,
+  CardInfoContainer,
   CardTextContainer,
-  CardTopContainer,
   CardTitle,
   CardBottomContainer,
   CustomButton,
@@ -13,8 +13,9 @@ import {
 
 const CardInformation = () => {
   const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];
+
   return (
-    <CardCon>
+    <CardContainer>
       <CardImageContainer>
         <CardImage src="#" alt="Image By AI" />
         <CardImage src="#" alt="Image By AI" />
@@ -22,11 +23,11 @@ const CardInformation = () => {
         <CardImage src="#" alt="Image By AI" />
         <CardImage src="#" alt="Image By AI" />
       </CardImageContainer>
-      <CardTextContainer>
-        <CardTopContainer>
+      <CardInfoContainer>
+        <CardTextContainer>
           <CardTitle>CafeName</CardTitle>
           <p>Star ( nums of review ) </p>
-        </CardTopContainer>
+        </CardTextContainer>
         <HashtagIcon Hashtags={HashtagData} />
         <CardBottomContainer>
           <p>Address</p>
@@ -34,8 +35,8 @@ const CardInformation = () => {
             Pick
           </CustomButton>
         </CardBottomContainer>
-      </CardTextContainer>
-    </CardCon>
+      </CardInfoContainer>
+    </CardContainer>
   );
 };
 

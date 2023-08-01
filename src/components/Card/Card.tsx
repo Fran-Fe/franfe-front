@@ -18,6 +18,7 @@ const Card = () => {
       sliderRef.current.slickNext();
     }
   };
+
   const slickSettings = {
     dots: false,
     infinite: true,
@@ -27,6 +28,7 @@ const Card = () => {
     prevArrow: <ArrowButton onClick={handlePrevClick} icon="❮" />, // Add onClick prop
     nextArrow: <ArrowButton onClick={handleNextClick} icon="❯" />,
   };
+
   return (
     <CustomSlider {...slickSettings}>
       <CardInformation />
