@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HashtagButton = styled.button`
+export const HashtagButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,20 +11,7 @@ const HashtagButton = styled.button`
   background-color: ${(props) => props.theme.backgroundTertiary};
 `;
 
-const HashtagIcon = styled.img`
+export const HashtagIcon = styled.img`
   width: 60%;
   height: 60%;
 `;
-
-const StaticHashTag = () => {
-  return (
-    <HashtagButton>
-      <HashtagIcon
-        src={`${process.env.PUBLIC_URL}/assets/images/hashtag_icon.svg`}
-        alt="HashTag Icon"
-      />
-    </HashtagButton>
-  );
-};
-
-export default StaticHashTag;

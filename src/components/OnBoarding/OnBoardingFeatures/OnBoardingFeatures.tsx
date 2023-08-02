@@ -5,7 +5,7 @@ import {
   OnBoardingFeatureTextContainer,
   OnBoardingFeatureTextDetail,
   OnBoardingFeatureTextTitle,
-} from 'components/OnBoarding/OnBoardingFeaturesUtil';
+} from 'components/OnBoarding/OnBoardingFeatures/OnBoardingFeaturesUtil';
 
 const OnBoardingFeatures = () => {
   return (

@@ -3,7 +3,8 @@ import { OnBoardingBriefContent, OnBoardingLogo, OnBoardingFeatures } from 'comp
 
 const OnBoardingContainer = styled.aside`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:
   height: 100vh;
   width: 50%;
   max-width: 420px;
