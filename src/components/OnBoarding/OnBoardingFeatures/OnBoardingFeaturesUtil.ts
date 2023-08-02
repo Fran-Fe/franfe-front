@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const OnBoardingFeatureContainter = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   height: 50%;
   padding: 1rem 0;
@@ -30,7 +29,8 @@ export const OnBoardingFeatureImage = styled.img`
 
 export const OnBoardingFeatureTextContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 80%;
   margin: 0 0 0 0.5rem;
 `;

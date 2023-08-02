@@ -1,4 +1,4 @@
-import { DetailRateContainer, DetailRateStar, DetailRateNumsReview } from 'components/Detail';
+import { DetailRateContainer, DetailRateStar, DetailRateNumsReview } from './DetailRateUtils';
 
 const DetailRate = () => {
   return (

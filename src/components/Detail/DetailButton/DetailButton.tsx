@@ -3,7 +3,7 @@ import {
   DetailPickButtonContainer,
   DetailPickButton,
   DetailInformationTooltip,
-} from 'components/Detail';
+} from './DetailButtonUtils';
 
 const DetailButton = () => {
   return (

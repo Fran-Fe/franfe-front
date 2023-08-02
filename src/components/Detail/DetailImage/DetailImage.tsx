@@ -1,4 +1,4 @@
-import { DetailImageContainer, DetailImg } from 'components/Detail';
+import { DetailImageContainer, DetailImg } from './DetailImageUtils';
 
 const DetailImage = () => {
   return (

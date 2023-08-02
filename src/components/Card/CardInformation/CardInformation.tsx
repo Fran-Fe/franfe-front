@@ -9,7 +9,7 @@ import {
   CardTitle,
   CardBottomContainer,
   CustomButton,
-} from './CardUtils';
+} from './CardInformationUtils';
 
 const CardInformation = () => {
   const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];

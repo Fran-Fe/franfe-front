@@ -6,4 +6,4 @@ export {
   RankingContainer,
   RankingText,
 } from './RankUtil';
-export { default as RankingCard } from './RankingCard';
+export { default as RankingCard } from './RankingCard/RankingCard';

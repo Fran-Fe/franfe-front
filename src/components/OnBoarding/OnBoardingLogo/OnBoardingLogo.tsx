@@ -1,14 +1,4 @@
-import styled from 'styled-components';
-
-const OnBoardingLogoContainer = styled.div`
-  width: 100%;
-  height: 30%;
-`;
-
-const OnBoardingLogoImg = styled.img`
-  width: 100%;
-  height: 100%;
-`;
+import { OnBoardingLogoContainer, OnBoardingLogoImg } from './OnBoardingLogoUtils';
 
 const OnBoardingLogo = () => {
   return (
