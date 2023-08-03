@@ -1,5 +1,3 @@
-import GoogleMapReact from 'google-map-react';
-
 export interface ILocation {
   lat: number;
   lng: number;

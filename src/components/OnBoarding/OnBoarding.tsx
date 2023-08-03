@@ -1,21 +1,22 @@
 import styled from 'styled-components';
+import { OnBoardingBriefContent, OnBoardingLogo, OnBoardingFeatures } from 'components/OnBoarding';
 
 const OnBoardingContainer = styled.aside`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:
   height: 100vh;
   width: 50%;
   max-width: 420px;
-`;
-
-const OnBoardingImg = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #191919;
+  padding: 3rem;
 `;
 
 const OnBoarding = () => {
   return (
     <OnBoardingContainer>
-      <OnBoardingImg />
+      <OnBoardingLogo />
+      <OnBoardingBriefContent />
+      <OnBoardingFeatures />
     </OnBoardingContainer>
   );
 };

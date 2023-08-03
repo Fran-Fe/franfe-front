@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import styled from 'styled-components';
 import { FooterContainer, FooterIconButton, FooterIcon, FooterCategories } from 'components/Footer';
 
 const Footer = () => {
@@ -17,7 +16,7 @@ const Footer = () => {
     const selectedCategory = event.currentTarget.name.toLowerCase();
     setSelectedFooter(selectedCategory);
 
-    if (['gallery', 'ranking'].includes(selectedCategory)) navigate(`/${selectedCategory}`);
+    if (['gallery', 'ranking', 'list'].includes(selectedCategory)) navigate(`/${selectedCategory}`);
     if (selectedCategory === 'home') navigate('/');
   };
 

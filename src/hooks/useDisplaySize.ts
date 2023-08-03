@@ -9,7 +9,7 @@ const useDisplaySize = () => {
     const updateDisplaySize = () => {
       timeoutId = setTimeout(() => {
         setCurrentDisplaySize(window.innerWidth);
-      }, 200);
+      }, 2000);
     };
     window.addEventListener('resize', updateDisplaySize);
 
