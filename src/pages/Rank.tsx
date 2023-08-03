@@ -1,7 +1,5 @@
-import { Ranking } from 'components/Rank';
-
 const Rank = () => {
-  return <Ranking />;
+  return <>Rank</>;
 };
 
 export default Rank;

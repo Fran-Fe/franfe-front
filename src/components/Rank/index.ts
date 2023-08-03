@@ -1,4 +1,4 @@
-export { default as Ranking } from './Ranking';
+export { default as Rank } from './Ranking';
 export {
   RankBackButton,
   RankingLayouts,

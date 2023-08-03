@@ -5,6 +5,10 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   body {
     padding: 0 !important;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
   }
   
   html {

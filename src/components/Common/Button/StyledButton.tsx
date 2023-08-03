@@ -8,11 +8,11 @@ interface ThemedButtonProps extends BaseButtonProps {
 }
 
 interface TransientButtonProps extends ThemedButtonProps {
-  isLoading?: boolean;
+  isloading?: boolean;
 }
 
-const getDisabledStyles = ({ isLoading }: TransientButtonProps) => {
-  if (isLoading === true) {
+const getDisabledStyles = ({ isloading }: TransientButtonProps) => {
+  if (isloading === true) {
     return `
       &:disabled,
       &.button--disabled {
@@ -32,8 +32,8 @@ const getDisabledStyles = ({ isLoading }: TransientButtonProps) => {
   `;
 };
 
-const getOpacity = ({ isLoading = false }: TransientButtonProps) => {
-  return isLoading ? '.8' : '1';
+const getOpacity = ({ isloading = false }: TransientButtonProps) => {
+  return isloading ? '.8' : '1';
 };
 
 const StyledButton = styled.button<BaseButtonProps>`

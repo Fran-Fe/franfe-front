@@ -1,8 +1,5 @@
-import styled from 'styled-components';
-import { List } from 'components/List';
-
 const Gallery = () => {
-  return <List />;
+  return <>Gallery</>;
 };
 
 export default Gallery;

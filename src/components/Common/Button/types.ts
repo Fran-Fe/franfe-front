@@ -20,7 +20,7 @@ export type Scale = (typeof scales)[keyof typeof scales];
 export type Variant = (typeof variants)[keyof typeof variants];
 
 export interface BaseButtonProps extends LayoutProps, SpaceProps {
-  isLoading?: boolean;
+  isloading?: boolean;
   scale?: Scale;
   variant?: Variant;
   disabled?: boolean;
