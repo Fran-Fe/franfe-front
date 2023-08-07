@@ -9,6 +9,7 @@ const OnBoardingContainer = styled.aside`
   width: 50%;
   max-width: 420px;
   padding: 3rem;
+  background-color: ${(props) => props.theme.backgroundPrimary};
 `;
 
 const OnBoarding = () => {

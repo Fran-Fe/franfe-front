@@ -15,9 +15,10 @@ const HashtagsOverflow = styled.div`
   }
 `;
 
-const HashtagIconButton = styled.button`
+export const HashtagIconButton = styled.button`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 1.5rem;
   margin: 0.2rem 0;

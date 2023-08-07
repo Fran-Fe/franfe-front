@@ -29,7 +29,7 @@ const Map = () => {
   };
   return (
     <GoogleMapReact
-      style={{ position: 'absolute', width: '100%', height: '100%' }}
+      style={{ position: 'absolute', width: '100%', height: '100%', zIndex: '0' }}
       bootstrapURLKeys={defaultLocation.bootstrapURLKeys}
       defaultCenter={defaultLocation.defaultCenter}
       defaultZoom={defaultLocation.defaultZoom}
