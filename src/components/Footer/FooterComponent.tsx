@@ -15,6 +15,7 @@ export const FooterContainer = styled.footer`
   height: 3.5rem;
   padding: 0.3rem;
   background-color: ${(props) => props.theme.backgroundPrimary};
+  z-index: 2;
 `;
 
 export const FooterIconButton = styled.button<IFooterButtonProps>`
