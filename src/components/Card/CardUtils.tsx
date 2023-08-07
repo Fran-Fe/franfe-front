@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 // SliderUtils
 export const CustomSlider = styled(Slider)`
   display: flex;
+  margin: auto 0 4rem;
   .slick-arrow {
     padding: 2rem;
     border-radius: 50%;
@@ -15,5 +16,4 @@ export const CustomSlider = styled(Slider)`
   .slick-next:before {
     color: ${(props) => props.theme.backgroundSecondary};
   }
-  z-index: 4;
 `;

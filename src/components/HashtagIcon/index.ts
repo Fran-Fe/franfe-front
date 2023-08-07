@@ -1,1 +1,1 @@
-export { default as HashtagIcon } from './HashtagIcon';
+export { default as HashtagIcon, HashtagIconButton } from './HashtagIcon';

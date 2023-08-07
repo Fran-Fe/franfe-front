@@ -9,7 +9,6 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 `;
 
 const Home = () => {
@@ -19,8 +18,8 @@ const Home = () => {
       <Header />
       <HashtagIcon Hashtags={HashtagData} />
       <RedoButton />
-      <Card />
       <Map />
+      <Card />
     </MainContainer>
   );
 };

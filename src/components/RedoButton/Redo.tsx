@@ -7,7 +7,7 @@ const RedoButton = styled(Button)`
   margin: 0.5rem auto;
   border-radius: 20px;
   background-color: ${(props) => props.theme.fontPrimary};
-  z-index: 4;
+  z-index: 1;
 `;
 
 const Redo = () => {
