@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import { useState } from 'react';
 import { Header } from 'components/Header';
-import { CardInformation } from 'components/Card';
+import { Card } from 'components/Card';
 import { HashtagIcon } from 'components/HashtagIcon';
+import { Drawer } from 'components/Common';
+import { Detail } from 'components/Detail';
 import {
   ListContainer,
-  SearchContainer,
   IconsContainer,
   BackButton,
   CardsContainer,
@@ -12,11 +13,21 @@ import {
 
 const List = () => {
   const DummyDatas = ['Reviews', 'Rates', 'WiFi'];
+  const size = '100%';
+
+  const [open, setOpen] = useState(false);
+
+  const showDetail = () => {
+    setOpen(true);
+  };
+
+  const closeDetail = () => {
+    setOpen(false);
+  };
+
   return (
     <ListContainer>
-      <SearchContainer>
-        <Header />
-      </SearchContainer>
+      <Header />
       <IconsContainer>
         <BackButton
           src={`${process.env.PUBLIC_URL}/assets/images/back_icon.svg`}
@@ -25,13 +36,23 @@ const List = () => {
         <HashtagIcon Hashtags={DummyDatas} />
       </IconsContainer>
       <CardsContainer>
-        <CardInformation />
-        <CardInformation />
-        <CardInformation />
-        <CardInformation />
-        <CardInformation />
-        <CardInformation />
+        <Card onClick={showDetail} />
+        <Card onClick={showDetail} />
+        <Card onClick={showDetail} />
+        <Card onClick={showDetail} />
+        <Card onClick={showDetail} />
+        <Card onClick={showDetail} />
       </CardsContainer>
+      <Drawer
+        placement="bottom"
+        closable={false}
+        onClose={closeDetail}
+        open={open}
+        getContainer={false}
+        height={size}
+      >
+        <Detail isOpen={open} onClose={closeDetail} />
+      </Drawer>
     </ListContainer>
   );
 };

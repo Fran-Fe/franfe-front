@@ -16,5 +16,5 @@ export const ArrowContainer = styled.div`
 export const ArrowIcon = styled(Button)`
   font-size: 2.5rem;
   background: transparent;
-  color: ${(props) => props.theme.backgroundPrimary};
+  color: ${(props) => props.theme.fontPrimary};
 `;

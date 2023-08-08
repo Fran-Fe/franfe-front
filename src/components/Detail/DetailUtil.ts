@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-export const DetailDrawer = styled.div`
-  display: flex;
+interface DetailDrawerProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+export const DetailDrawer = styled.div<DetailDrawerProps>`
+  display: ${(props) => (props.open ? 'flex' : 'none')};
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
