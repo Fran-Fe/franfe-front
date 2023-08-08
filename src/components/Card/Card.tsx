@@ -1,40 +1,53 @@
-import { useRef } from 'react';
-import Slider from 'react-slick';
-import { ArrowButton, CardInformation, CustomSlider } from 'components/Card';
+import { HashtagIcon } from 'components/HashtagIcon';
+import {
+  CardContainer,
+  CardImage,
+  CardImageContainer,
+  CardInfoContainer,
+  CardTextContainer,
+  CardTitle,
+  CardBottomContainer,
+  CustomButton,
+} from './CardUtils';
 
-const Card = () => {
-  const sliderRef = useRef<Slider>(null);
+interface ICardOnClick {
+  onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
 
-  const handlePrevClick = () => {
-    // Move to the previous slide
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
+const Card = (props: ICardOnClick) => {
+  const { onClick } = props;
+
+  const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];
+
+  const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (onClick) {
+      onClick(event);
     }
-  };
-
-  const handleNextClick = () => {
-    // Move to the next slide
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
-
-  const slickSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: <ArrowButton onClick={handlePrevClick} icon="❮" />, // Add onClick prop
-    nextArrow: <ArrowButton onClick={handleNextClick} icon="❯" />,
   };
 
   return (
-    <CustomSlider {...slickSettings}>
-      <CardInformation />
-      <CardInformation />
-      <CardInformation />
-    </CustomSlider>
+    <CardContainer onClick={handleCardClick}>
+      <CardImageContainer>
+        <CardImage src="#" alt="Image By AI" />
+        <CardImage src="#" alt="Image By AI" />
+        <CardImage src="#" alt="Image By AI" />
+        <CardImage src="#" alt="Image By AI" />
+        <CardImage src="#" alt="Image By AI" />
+      </CardImageContainer>
+      <CardInfoContainer>
+        <CardTextContainer>
+          <CardTitle>CafeName</CardTitle>
+          <p>Star ( nums of review ) </p>
+        </CardTextContainer>
+        <HashtagIcon Hashtags={HashtagData} />
+        <CardBottomContainer>
+          <p>Address</p>
+          <CustomButton variant="primary" scale="xs">
+            Pick
+          </CustomButton>
+        </CardBottomContainer>
+      </CardInfoContainer>
+    </CardContainer>
   );
 };
 

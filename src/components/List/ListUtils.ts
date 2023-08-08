@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Header } from 'components/Header';
 
 export const ListContainer = styled.div`
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
@@ -9,26 +9,10 @@ export const ListContainer = styled.div`
   overflow: auto;
 `;
 
-export const SearchContainer = styled.div`
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 6rem;
-  padding: 0.5rem;
-  background-color: ${(props) => props.theme.backgroundSecondary};
-  z-index: 2;
-`;
-
 export const IconsContainer = styled.div`
-  position: sticky;
-  top: 6rem;
   display: flex;
   width: 100%;
   padding: 0 0.5rem;
-  background-color: #fff;
   z-index: 2;
 `;
 

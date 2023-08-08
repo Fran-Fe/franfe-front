@@ -11,7 +11,6 @@ export const CardContainer = styled.div`
   margin-bottom: 1rem;
   overflow: auto;
   border-radius: 1.25rem;
-  pointer-events: none;
   box-shadow: 0 4px 4px ${(props) => props.theme.backgroundSecondary};
   background-color: ${(props) => props.theme.backgroundPrimary};
 `;
@@ -23,7 +22,6 @@ export const CardImageContainer = styled.div`
   width: 100%;
   height: 40%;
   overflow-x: auto;
-  pointer-events: auto;
 `;
 
 export const CardImage = styled.img`
