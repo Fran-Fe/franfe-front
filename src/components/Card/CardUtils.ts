@@ -22,6 +22,9 @@ export const CardImageContainer = styled.div`
   width: 100%;
   height: 40%;
   overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const CardImage = styled.img`

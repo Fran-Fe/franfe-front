@@ -5,6 +5,7 @@ export const RankingLayouts = styled.div`
   flex-wrap: wrap;
   width: 100%;
   heigth: 100%;
+  padding: 0 0 4rem 0;
 `;
 
 export const RankingHeader = styled.div`

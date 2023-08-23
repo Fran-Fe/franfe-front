@@ -1,5 +1,7 @@
+import { CompareComponent } from 'components/Compare';
+
 const Compare = () => {
-  return <>Compare Page</>;
+  return <CompareComponent />;
 };
 
 export default Compare;
