@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Header } from 'components/Header';
 
 export const ListContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   height: 100vh;
+  padding: 0 0 2rem 0;
   overflow: auto;
 `;
 
