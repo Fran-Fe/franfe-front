@@ -64,18 +64,18 @@ const Compare = (props: ICompareDrawer) => {
               navigate('/Compare');
             }}
           >
-            Pick
+            Start Compare
           </Button>
         }
       >
+        {/* <Card onClick={showDetail} />
         <Card onClick={showDetail} />
         <Card onClick={showDetail} />
         <Card onClick={showDetail} />
         <Card onClick={showDetail} />
         <Card onClick={showDetail} />
         <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
+        <Card onClick={showDetail} /> */}
       </CompareDrawer>
       <Drawer
         placement="bottom"
@@ -85,10 +85,10 @@ const Compare = (props: ICompareDrawer) => {
         getContainer={false}
         height={detailSize}
       >
-        <Detail isOpen={openDetail} onClose={closeDetail} />
+        {/* <Detail isOpen={openDetail} onClose={closeDetail} /> */}
       </Drawer>
     </>
   );
 };
 
-export default Compare;
+export default CompareDrawer;

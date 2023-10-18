@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { LocationContext } from 'contexts';
+import { fetchCafeLists } from 'hooks';
 import { Header } from 'components/Header';
 import { Card } from 'components/Card';
 import { HashtagIcon } from 'components/HashtagIcon';
@@ -12,12 +14,18 @@ import {
 } from 'components/List/ListUtils';
 
 const List = () => {
+  const [open, setOpen] = useState(false);
+  const [cardData, setCardData] = useState<any[]>([]);
+  const [hashtagData, setHashtagData] = useState([]);
+  const [cafes, setCafes] = useState([]);
+  const { currentPosition, distanceInMeters } = useContext(LocationContext);
+  const [selectedUuid, setSelectedUuid] = useState<string | null>(null);
+
   const DummyDatas = ['Reviews', 'Rates', 'WiFi'];
   const size = '100%';
 
-  const [open, setOpen] = useState(false);
-
-  const showDetail = () => {
+  const showDetail = (uuid: string) => {
+    setSelectedUuid(uuid);
     setOpen(true);
   };
 
@@ -25,23 +33,67 @@ const List = () => {
     setOpen(false);
   };
 
+  const dataCache: any = {};
+
+  useEffect(() => {
+    if (!currentPosition || !distanceInMeters) return;
+
+    const fetchData = async () => {
+      const cacheKey = `${currentPosition.lat},${currentPosition.lng},${distanceInMeters}`;
+
+      if (dataCache[cacheKey]) {
+        // 캐시에서 데이터 가져오기
+        const cachedData = dataCache[cacheKey];
+        setCardData(cachedData.cafeInfoList);
+        setHashtagData(cachedData.topCountHashtags);
+        setCafes(cachedData.cafes);
+      } else {
+        // 서버에서 데이터 가져오기
+        const fetchedData = await fetchCafeLists(
+          currentPosition.lat,
+          currentPosition.lng,
+          undefined,
+          1,
+          50,
+        );
+
+        const cafesData = fetchedData.cafeInfoList.map((cafe: any) => ({
+          lat: parseFloat(cafe.lat),
+          lng: parseFloat(cafe.lng),
+          text: cafe.placeName,
+        }));
+        setCardData(fetchedData.cafeInfoList);
+        setHashtagData(fetchedData.topCountHashtags);
+        setCafes(cafesData);
+
+        // 캐시 업데이트
+        dataCache[cacheKey] = {
+          cafeInfoList: fetchedData.cafeInfoList,
+          topCountHashtags: fetchedData.topCountHashtags,
+          cafes: cafesData,
+        };
+      }
+    };
+
+    fetchData();
+  }, [currentPosition, distanceInMeters]);
+
+  console.log('List : ', cardData);
+
   return (
     <ListContainer>
-      <Header />
+      <Header Hashtags={hashtagData} />
       <IconsContainer>
-        <BackButton
+        {/* <BackButton
           src={`${process.env.PUBLIC_URL}/assets/images/back_icon.svg`}
           alt="Bact Button Img"
-        />
+        /> */}
         <HashtagIcon Hashtags={DummyDatas} />
       </IconsContainer>
       <CardsContainer>
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
-        <Card onClick={showDetail} />
+        {cardData.map((data) => (
+          <Card key={data.uuid} onClick={() => showDetail(data.uuid)} {...data} />
+        ))}
       </CardsContainer>
       <Drawer
         placement="bottom"
@@ -51,7 +103,7 @@ const List = () => {
         getContainer={false}
         height={size}
       >
-        <Detail isOpen={open} onClose={closeDetail} />
+        <Detail isOpen={open} onClose={closeDetail} uuid={selectedUuid!} />
       </Drawer>
     </ListContainer>
   );

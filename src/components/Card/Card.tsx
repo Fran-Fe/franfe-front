@@ -11,13 +11,45 @@ import {
 } from './CardUtils';
 
 interface ICardOnClick {
+  address: string;
+  distance: number;
+  hashTags: string[];
+  placeName: string;
+  reviewCount: number;
+  thumbnails: any;
+  rating: number;
+  uuid: string;
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-const Card = (props: ICardOnClick) => {
-  const { onClick } = props;
+const filterThumbnailsByCategory = (thumbnails: any[]) => {
+  const filteredThumbnails: any[] = [];
+  const categories: { [key: number]: number } = {}; // 카테고리 별 썸네일 카운트를 저장하기 위한 객체
 
-  const HashtagData = ['cafe', 'cozy', 'coffee', 'bread', 'latte', 'choco', 'bar', 'beer'];
+  thumbnails.forEach((thumb: any) => {
+    const { category } = thumb; // 구조 분해 할당 사용
+
+    // 해당 카테고리에 대한 카운트가 없거나 3 미만인 경우
+    if (!categories[category] || categories[category] < 3) {
+      filteredThumbnails.push(thumb);
+
+      // 카테고리에 대한 썸네일 카운트를 증가시킴
+      if (categories[category]) {
+        categories[category] += 1;
+      } else {
+        categories[category] = 1;
+      }
+    }
+  });
+
+  return filteredThumbnails;
+};
+
+const Card = (props: ICardOnClick) => {
+  const { onClick, address, distance, hashTags, placeName, reviewCount, thumbnails, rating, uuid } =
+    props;
+
+  const filteredThumbnails = filterThumbnailsByCategory(thumbnails);
 
   const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (onClick) {
@@ -28,20 +60,26 @@ const Card = (props: ICardOnClick) => {
   return (
     <CardContainer onClick={handleCardClick}>
       <CardImageContainer>
-        <CardImage src="#" alt="Image By AI" />
-        <CardImage src="#" alt="Image By AI" />
-        <CardImage src="#" alt="Image By AI" />
-        <CardImage src="#" alt="Image By AI" />
-        <CardImage src="#" alt="Image By AI" />
+        {filteredThumbnails.map((thumb) => (
+          <CardImage
+            key={thumb.url}
+            src={thumb.url}
+            alt="Image By AI"
+            referrerPolicy="no-referrer"
+          />
+        ))}
       </CardImageContainer>
       <CardInfoContainer>
         <CardTextContainer>
-          <CardTitle>CafeName</CardTitle>
-          <p>Star ( nums of review ) </p>
+          <CardTitle>{placeName}</CardTitle>
+          <p>
+            {rating} {reviewCount}{' '}
+          </p>
         </CardTextContainer>
-        <HashtagIcon Hashtags={HashtagData} />
+        <HashtagIcon Hashtags={hashTags} />
         <CardBottomContainer>
-          <p>Address</p>
+          <p>{address}</p>
+          <p>{distance}</p>
           <CustomButton variant="primary" scale="xs">
             Pick
           </CustomButton>

@@ -33,7 +33,7 @@ export const DetailTopContainer = styled.div`
 `;
 
 export const DetailTitle = styled.div`
-  font-size: 2.5rem;
+  font-size: 2em;
 `;
 
 export const DetailGPTContainer = styled.div`
@@ -41,6 +41,6 @@ export const DetailGPTContainer = styled.div`
   width: 100%;
   height: 40%;
   margin-top: 0.5rem;
-  font-size: 5rem;
+  font-size: 5em;
   background-color: #e2e2e2;
 `;

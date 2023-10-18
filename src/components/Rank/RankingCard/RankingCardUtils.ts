@@ -10,6 +10,7 @@ export interface RankingCardProps {
   alt: string;
   title: string;
   content: string;
+  cafeId: string;
 }
 
 export const Card = styled.div<CardRanking>`

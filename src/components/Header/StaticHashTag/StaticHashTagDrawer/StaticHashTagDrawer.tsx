@@ -19,8 +19,7 @@ function generateRandomString() {
 const StaticHashTagDrawer = (props: IDrawerVisble) => {
   const HashtagData = ['WiFi', 'Park', 'Power', 'Toliet'];
   const size = '100%';
-  const { isOpen, onClose } = props;
-  const Hashtags = Array.from({ length: 100 }, generateRandomString);
+  const { isOpen, onClose, Hashtags } = props;
 
   return (
     <Drawer

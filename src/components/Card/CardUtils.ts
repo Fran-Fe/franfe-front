@@ -29,7 +29,7 @@ export const CardImageContainer = styled.div`
 
 export const CardImage = styled.img`
   flex-shrink: 0;
-  width: 40%;
+  width: auto;
   height: 100%;
   background-color: ${(props) => props.theme.backgroundSecondary};
 `;

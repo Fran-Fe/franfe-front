@@ -1,11 +1,17 @@
 import { DetailRateContainer, DetailRateStar, DetailRateNumsReview } from './DetailRateUtils';
 
-const DetailRate = () => {
+interface DetailRateProps {
+  rating: number;
+  numsOfReviews: number;
+}
+
+const DetailRate = (props: DetailRateProps) => {
+  const { rating, numsOfReviews } = props;
   return (
     <DetailRateContainer>
-      4.5
+      {rating}
       <DetailRateStar />
-      <DetailRateNumsReview>151515</DetailRateNumsReview>
+      <DetailRateNumsReview>{numsOfReviews}</DetailRateNumsReview>
     </DetailRateContainer>
   );
 };

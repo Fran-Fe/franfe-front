@@ -13,10 +13,12 @@ import {
 
 const RankingCard = (props: RankingCardProps) => {
   const [openDetail, setOpenDetail] = useState(false);
-  const { ranking, src, alt, title, content } = props;
+  const { ranking, src, alt, title, content, cafeId } = props;
+  const [selectedUuid, setSelectedUuid] = useState<string | null>(null);
   const detailSize = '100%';
 
-  const showDetail = () => {
+  const showDetail = (uuid: string) => {
+    setSelectedUuid(uuid);
     setOpenDetail(true);
   };
 
@@ -35,7 +37,8 @@ const RankingCard = (props: RankingCardProps) => {
         </CardTextContainer>
         <CardIcon
           src={`${process.env.PUBLIC_URL}/assets/images/ranking_search_icon.svg`}
-          onClick={showDetail}
+          onClick={() => showDetail(cafeId)}
+          style={{ cursor: 'pointer' }}
         />
       </Card>
       <Drawer
@@ -46,7 +49,7 @@ const RankingCard = (props: RankingCardProps) => {
         getContainer={false}
         height={detailSize}
       >
-        <Detail isOpen={openDetail} onClose={closeDetail} />
+        <Detail isOpen={openDetail} onClose={closeDetail} uuid={selectedUuid!} />
       </Drawer>
     </>
   );

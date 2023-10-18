@@ -6,60 +6,58 @@ import {
   RankingText,
   RankingCard,
 } from 'components/Rank';
+import { useEffect, useState } from 'react';
+import { fetchRankings } from 'hooks';
 
 const Ranking = () => {
+  const [cafeInfo, setCafeInfo] = useState<any>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchRankings();
+        setCafeInfo(data);
+      } catch (error) {
+        console.error('Error fetching cafe details:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  console.log('Ranking: ', cafeInfo);
+
   return (
     <RankingLayouts>
-      <RankingHeader>
+      {/* <RankingHeader>
         <RankBackButton src={`${process.env.PUBLIC_URL}/assets/images/back_icon.svg`} />
-      </RankingHeader>
+      </RankingHeader> */}
       <RankingContainer>
         <RankingText>GPT Ranking</RankingText>
-        <RankingCard
-          ranking={1}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
-        <RankingCard
-          ranking={2}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
-        <RankingCard
-          ranking={3}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
+        {cafeInfo?.userCompareWinRank?.list?.map((item: any, index: number) => (
+          <RankingCard
+            key={item.cafeUuid}
+            ranking={item.rank}
+            src="#" // URL 정보에 따라 채우기
+            alt="Ranking Image"
+            title="Cafe Name" // cafe 이름에 따라 채우기
+            content="Additional Info...." // 추가 정보에 따라 채우기
+            cafeId={item.cafeUuid}
+          />
+        ))}
       </RankingContainer>
       <RankingContainer>
         <RankingText>Picked Ranking</RankingText>
-        <RankingCard
-          ranking={1}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
-        <RankingCard
-          ranking={2}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
-        <RankingCard
-          ranking={3}
-          src="#"
-          alt="Ranking Image"
-          title="Cafe Name"
-          content="Additional Info...."
-        />
+        {cafeInfo?.userComparisonRank?.list?.map((item: any, index: number) => (
+          <RankingCard
+            key={item.cafeUuid}
+            ranking={item.rank}
+            src="#" // URL 정보에 따라 채우기
+            alt="Ranking Image"
+            title="Cafe Name" // cafe 이름에 따라 채우기
+            content="Additional Info...." // 추가 정보에 따라 채우기
+            cafeId={item.cafeUuid}
+          />
+        ))}
       </RankingContainer>
     </RankingLayouts>
   );

@@ -15,7 +15,7 @@ export const DetailImageContainer = styled.div`
 
 export const DetailImg = styled.img`
   flex-shrink: 0;
-  width: 90%;
+  width: auto;
   height: 100%;
   margin: 0 0.5rem;
   border-radius: 20px;
