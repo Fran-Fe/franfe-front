@@ -5,6 +5,7 @@ import { HashtagIconButton } from 'components/HashtagIcon';
 export interface IDrawerVisble {
   isOpen: boolean;
   onClose: () => void;
+  Hashtags: string[];
 }
 
 export const StaticHashtagDrawerContainer = styled.div`
@@ -41,8 +42,9 @@ export const StaticHashtagIconsContainer = styled.div`
 `;
 
 export const StaticHashtagIconButton = styled(HashtagIconButton)`
-  width: 20%;
+  width: auto;
   height: 2rem;
+  white-space: nowrap;
   border: 0.2rem solid ${(props) => props.theme.buttonPrimary};
 `;
 
@@ -56,7 +58,9 @@ export const DynamicHashtagIconsContainer = styled.div`
 `;
 
 export const DynamicHashtagIconButton = styled(HashtagIconButton)`
-  width: 16%;
+  width: auto;
+  height: 1.5rem;
+  white-space: nowrap;
 `;
 
 export const StaticHashTagDrawerFooter = styled.div`

@@ -8,9 +8,15 @@ const hoverMarkerStyle = {
   url: `${process.env.PUBLIC_URL}/assets/images/marker_icon_hover_click.svg`,
 };
 
+let existingMarkers: any[] = [];
+
 const addMarker = (map: any, maps: any, markers: IMarker[]) => {
+  // 기존에 있는 마커를 지움
+  existingMarkers.forEach((marker) => marker.setMap(null));
+  // 배열을 비움
+  existingMarkers = [];
+
   markers.forEach((marker) => {
-    // 새로운 마커 생성
     const markerObj = new maps.Marker({
       position: { lat: marker.lat, lng: marker.lng },
       map,
@@ -20,20 +26,20 @@ const addMarker = (map: any, maps: any, markers: IMarker[]) => {
       },
     });
 
-    // 마커 클릭 이벤트 리스너 등록
     markerObj.addListener('click', () => {
       console.log(`You've clicked a marker! Text: ${marker.text}`);
     });
 
-    // 마커의 mouseover 이벤트 리스너 등록
     markerObj.addListener('mouseover', () => {
       markerObj.setIcon(hoverMarkerStyle);
     });
 
-    // 마커의 mouseout 이벤트 리스너 등록
     markerObj.addListener('mouseout', () => {
       markerObj.setIcon(defaultMarkerStyle);
     });
+
+    // 새로 생성된 마커를 배열에 추가
+    existingMarkers.push(markerObj);
   });
 };
 

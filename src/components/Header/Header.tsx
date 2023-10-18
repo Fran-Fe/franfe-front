@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { SearchBar, StaticHashTag } from 'components/Header';
 
+interface HeaderHashtagProps {
+  Hashtags: string[];
+}
+
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
@@ -11,11 +15,12 @@ const HeaderContainer = styled.header`
   z-index: 2;
 `;
 
-const Header = () => {
+const Header = (props: HeaderHashtagProps) => {
+  const { Hashtags } = props;
   return (
     <HeaderContainer>
       <SearchBar />
-      <StaticHashTag />
+      <StaticHashTag Hashtags={Hashtags} />
     </HeaderContainer>
   );
 };

@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // SliderUtils
 export const CustomSlider = styled(Slider)`
-  display: flex;
   margin: auto 0 4rem;
   .slick-arrow {
     padding: 2rem;

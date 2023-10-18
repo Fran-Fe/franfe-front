@@ -5,7 +5,7 @@ export const RankingLayouts = styled.div`
   flex-wrap: wrap;
   width: 100%;
   heigth: 100%;
-  padding: 0 0 4rem 0;
+  padding: 2rem 0 4rem 0;
 `;
 
 export const RankingHeader = styled.div`
@@ -26,7 +26,7 @@ export const RankingContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 43%;
+  height: 50%;
 `;
 
 export const RankingText = styled.div`

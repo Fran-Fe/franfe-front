@@ -51,8 +51,8 @@ const Compare = () => {
       <CompareGPTContainer>GPT FILL IN</CompareGPTContainer>
       <CompareCardsContainer>
         <Slick>
-          <Card onClick={showDetail} />
-          <Card onClick={showDetail} />
+          {/* <Card onClick={showDetail} />
+          <Card onClick={showDetail} /> */}
         </Slick>
       </CompareCardsContainer>
       <Drawer
@@ -63,7 +63,7 @@ const Compare = () => {
         getContainer={false}
         height={detailSize}
       >
-        <Detail isOpen={openDetail} onClose={closeDetail} />
+        {/* <Detail isOpen={openDetail} onClose={closeDetail} /> */}
       </Drawer>
     </CompareContainer>
   );

@@ -1,1 +1,1 @@
-export { default as GalleryContainer } from './GalleryContainer';
+export { default as GalleryComponent } from './Gallery';

@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { HashtagButton, HashtagIcon } from 'components/Header/StaticHashTag/StaticHashTagUtils';
 import StaticHashTagDrawer from './StaticHashTagDrawer/StaticHashTagDrawer';
 
-const StaticHashTag = () => {
+interface HeaderStaticHashtagsProps {
+  Hashtags: string[];
+}
+
+const StaticHashTag = (props: HeaderStaticHashtagsProps) => {
+  const { Hashtags } = props;
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -21,7 +26,7 @@ const StaticHashTag = () => {
           alt="HashTag Icon"
         />
       </HashtagButton>
-      <StaticHashTagDrawer isOpen={open} onClose={onClose} />
+      <StaticHashTagDrawer isOpen={open} onClose={onClose} Hashtags={Hashtags} />
     </>
   );
 };
